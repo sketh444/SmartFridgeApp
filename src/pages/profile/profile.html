@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left margin-left="10px">
+      <button ion-button icon-only>
+            <ion-icon (click)="addNewFridgeItem()" name="pizza"></ion-icon>     
+      </button>
+    </ion-buttons>
+    <ion-title>{{title | uppercase}}</ion-title>
+    <ion-buttons right margin-right="10px">
+      <button ion-button icon-only>
+            <ion-icon (click)="takeFoodOutOfFridge()" name="happy"></ion-icon>     
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="background: transparent;">
+    <ion-item class="list-item" style="margin-top:20px; background: transparent;">
+      <ion-icon name="person" item-left color="tertiary" style="font-size:23px; display: inline-block; *display: inline; zoom: 1;"></ion-icon> 
+      <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px;" text-wrap>Name: {{fullName}}</ion-label>
+    </ion-item>
+    <ion-item class="list-item" style="background: transparent;">
+      <ion-icon name="mail" item-left color="tertiary" style="font-size:23px; display: inline-block; *display: inline; zoom: 1;"></ion-icon> 
+      <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px;" text-wrap>Email Address: {{emailAddress}}</ion-label>
+    </ion-item>
+    <ion-item class="list-item" style="background: transparent;">
+      <ion-icon name="calendar" item-left color="tertiary" style="font-size:23px; display: inline-block; *display: inline; zoom: 1;"></ion-icon> 
+      <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px;" text-wrap>Dietary Restrictions/Allergies: {{allergies}}</ion-label>
+    </ion-item>
+    <ion-item class="list-item" style="background: transparent;">
+      <ion-icon name="trophy" item-left color="tertiary" style="font-size:23px; display: inline-block; *display: inline; zoom: 1;"></ion-icon> 
+      <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px;" text-wrap>My Goal: {{goal}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <button  style="margin-bottom: 30px;" ion-button round color="tertiary" class="main-buttons" (click)="logOut()">LOG OUT</button>
+  <button  ion-button  style="box-shadow: none; margin-top: 15px !important; font-size: 17px; margin-bottom: 20px;" class="other-buttons" (click)="credits()">CREDITS</button>
+</ion-content>
