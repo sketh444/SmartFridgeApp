@@ -1,0 +1,51 @@
+<!--
+  Generated template for the FridgePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left margin-left="10px">
+      <button ion-button icon-only>
+            <ion-icon (click)="addNewFridgeItem()" name="pizza"></ion-icon>     
+      </button>
+    </ion-buttons>
+    <ion-title>{{title | uppercase}}</ion-title>
+    <ion-buttons right margin-right="10px">
+      <button ion-button icon-only>
+            <ion-icon (click)="takeFoodOutOfFridge()" name="happy"></ion-icon>     
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card class="myCard"> 
+      <div style="background-color: #fc7a4a; height: 45px; position: relative;">
+        <ion-icon (click)="addFridgeItem()" name="add" color="whiteColor" style="font-size:23px; display: inline-block; *display: inline; zoom: 1; position: absolute; right: 0px; margin-right: 10px; padding: 10px;"></ion-icon>
+        <p style="display: inline-block; *display: inline; zoom: 1; color: white; font-size: 17px; position: relative; top: 10px; margin-left: 20px;">What's in my fridge?</p> 
+      </div>
+      <ion-list *ngIf="noFridgeList==true">
+        <ion-item *ngFor="let food of firestoreFridgeList | async" style="position: relative; height: 45px; ">
+          <button item-right clear style="font-size:23px; display: inline-block; *display: inline; zoom: 1; position: absolute; right: 0px; margin-right: 10px; padding: 10px; background-color: transparent;" (click)='deleteFridgeItem(food)'><ion-icon name="close" color="black" ></ion-icon></button>
+          <p text-wrapstyle="color: black; font-size: 16px;display: inline;">{{food.quantity}} {{food.foodName}}</p>
+        </ion-item>
+      </ion-list>
+      <p *ngIf="noFridgeList==false" style="margin-top: 10px; margin-left: 20px; margin-right: 20px; margin-bottom: 15px; font-size: 17px;">Add new items to your fridge!</p>
+    </ion-card>
+
+      <ion-card class="myCard" style="margin-top: 30px;"> 
+        <div style="background-color: #ff975f; height: 45px; position: relative;">
+          <ion-icon (click)="addGroceryListItem()" name="add" color="whiteColor" style="font-size:23px; display: inline-block; *display: inline; zoom: 1; position: absolute; right: 0px; margin-right: 10px; padding: 10px;"></ion-icon>
+          <p style="display: inline-block; *display: inline; zoom: 1; color: white; font-size: 17px; position: relative; top: 10px; margin-left: 20px;">My Grocery List</p> 
+        </div>
+        <ion-list *ngIf="noGroceryList==true">
+          <ion-item *ngFor="let food of groceryList | async">
+              <p style="color: black; font-size: 16px;display: inline;">{{food.quantity}} {{food.foodName}}</p>
+          </ion-item>
+        </ion-list>
+        <p *ngIf="noGroceryList==false" style="margin-top: 10px; margin-left: 20px; margin-right: 20px; margin-bottom: 15px; font-size: 17px;">Add new items to your grocery list!</p>
+      </ion-card>
+  </ion-content>

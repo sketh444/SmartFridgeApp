@@ -1,0 +1,48 @@
+page-onboarding {
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .central-image{
+        vertical-align: 50%;
+        margin-top: 150px!important;
+        display: block;
+        margin: 0 auto;
+         align-items: center!important;
+      }
+
+      .logo-text{
+        display: block;
+        margin: 0 auto;
+         align-items: center!important;
+         margin-top:10px;
+         font-size: 25px;
+         text-align: center;
+      }
+
+      .main-buttons-1{
+        display: block;
+        margin: 0 auto;
+         align-items: center!important;
+         font-family: serif;
+         margin-top:40px;
+         width:180px;
+         font-size: 17px;
+         padding: 25px;
+      }
+      .main-buttons-2{
+        display: block;
+        margin: 0 auto;
+         align-items: center!important;
+         font-family: serif;
+         margin-top:20px;
+         width:180px;
+         font-size: 17px;
+         padding: 25px;
+      }
+}

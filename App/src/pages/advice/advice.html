@@ -1,0 +1,78 @@
+<!--
+  Generated template for the AdvicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left margin-left="10px">
+      <button (click)="addNewFridgeItem()" ion-button icon-only>
+            <ion-icon name="pizza"></ion-icon>     
+      </button>
+    </ion-buttons>
+    <ion-title>{{title | uppercase}}</ion-title>
+    <ion-buttons right margin-right="10px">
+      <button (click)="takeFoodOutOfFridge()" ion-button icon-only>
+            <ion-icon name="happy"></ion-icon>     
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list style="padding-top: 20px;">
+      <ion-card class="myCard" style="border-radius: 10px; margin-top: 20px;" (click)="launchFacialEmotionRecognition($event)">
+        <img style="background-position: center center;background-repeat: no-repeat;width:100%;height:200px; object-fit: cover" src="/assets/imgs/what_to_eat.png"/>
+        <div class="myOverlay">
+          <div class="card-title" style="text-align: center; color: black; font-size: 17px;"text-color="black">What should I eat now?</div>
+        </div>      
+    </ion-card>
+  <ion-item-divider style="margin-top: 5px; background-color: #fffcee; color: dark;">
+  </ion-item-divider>
+    <p style="font-size: 16px;text-align: center; margin-top: 30px;">EMOTION-SPECIFIC FOOD RECOMMENDATIONS</p>
+
+    <div style="margin-top:30px;" class="row">
+     
+      <ion-list class="column" style="margin: 0px; padding: 0px; background: transparent;">
+          <ion-card class="myCardEmotion" style="background-color: #f4cb5c; height: 40px; padding: 0px !important; position: relative;" (click)="happy($event)">
+            <img class="emotion" src="/assets/imgs/happy.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+            <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Happy</ion-label>
+          </ion-card>
+          <ion-card class="myCardEmotion" style="background-color: #e78e47;  height: 40px;margin-top: 20px !important; position: relative;" (click)="angry($event)">
+            <img class="emotion" src="/assets/imgs/angry.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+            <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Angry</ion-label>
+          </ion-card>
+          <ion-card class="myCardEmotion" style="background-color: #f2bd7f;  height: 40px;margin-top: 20px !important; position: relative;" (click)="scared($event)">
+            <img class="emotion" src="/assets/imgs/scared.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+            <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Scared</ion-label>
+          </ion-card>
+          <ion-card class="myCardEmotion" style="background-color: #e78e47;  height: 40px;margin-top: 20px !important; position: relative;" (click)="bored($event)">
+            <img class="emotion" src="/assets/imgs/bored.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+            <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Bored</ion-label>
+          </ion-card>
+      </ion-list>
+
+      <ion-list class="column" style="margin: 0px; padding: 0px; background: transparent;margin-left: 20px;">
+        <ion-card class="myCardEmotion" style="background-color: #e78e47; height: 40px; position: relative;" (click)="sad($event)">
+          <img class="emotion" src="/assets/imgs/sad.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+          <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Sad</ion-label>
+        </ion-card>
+        <ion-card class="myCardEmotion" style="background-color: #f6daab;  height: 40px; margin-top: 20px !important; position: relative;" (click)="disgusted($event)">
+          <img class="emotion" src="/assets/imgs/disgusted.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+          <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Disgusted</ion-label>
+        </ion-card>
+        <ion-card class="myCardEmotion" style="background-color: #e48861;  height: 40px; margin-top: 20px !important; position: relative;" (click)="stressed($event)">
+          <img class="emotion" src="/assets/imgs/stressed.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+          <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Stressed</ion-label>
+        </ion-card>
+        <ion-card class="myCardEmotion" style="background-color: #e78e47;  height: 40px; margin-top: 20px !important; position: relative;" (click)="distressed($event)">
+          <img class="emotion" src="/assets/imgs/distressed.png" item-left style="display: inline-block; *display: inline; zoom: 1;"/> 
+          <ion-label style="display: inline-block; *display: inline; zoom: 1; font-size: 15px; color: white; font-family: Lato-Regular; position: absolute; left: 45px;" text-wrap>Distressed</ion-label>
+        </ion-card>
+      </ion-list>
+
+    </div>
+
+  </ion-list>
+</ion-content>
