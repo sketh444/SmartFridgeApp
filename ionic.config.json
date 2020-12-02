@@ -1,7 +1,0 @@
-{
-  "name": "SmartFridgeApp",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
