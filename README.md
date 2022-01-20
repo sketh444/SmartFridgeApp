@@ -1,7 +1,9 @@
 # SmartFridgeApp
  
-Made by Bella Baidak and Kaajal Gupta at Affectiva for EMPath 2020 Makeathon. 
-Smart fridge app that makes food recomendations based on users current mood by reading users faical emotion. 
+Made for the EMPath 2020 Makeathon at Affectiva. 
 
-Team members: Bella Baidak, Kaajal Gupta, Ahmed Mohamed El-Karashily, Jeffrey Shi
-Mentor: Kunjal Panchal
+This smart fridge application prototype provides users with food recomendations based on their current mood and whats available in thier fridge. The application uses Affectiva's emotional recognition API to detect users emotions. 
+
+My Role: User research and UX Design 
+
+Team members: Bella Baidak, Kaajal Gupta (Developer), Ahmed Mohamed El-Karashily (Computer Vision), Jeffrey Shi (Reseacher), Kunjal Panchal(Mentor) 
